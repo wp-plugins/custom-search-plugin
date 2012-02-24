@@ -1,10 +1,10 @@
 === Custom Search Plugin ===
 Contributors: bestwebsoft
-Donate link: http://bestwebsoft.com/
+Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=13
 Tags: custom, type, search, better search, custom type, custom post, custom search, custom search plugin, custom post types search, custom content types, custom post types.
 Requires at least: 3.0
 Tested up to: 3.3
-Stable tag: 2011.
+Stable tag: 1.02
 
 This plugin allows you to implement search for custom types on your site.
 
@@ -12,8 +12,8 @@ This plugin allows you to implement search for custom types on your site.
 
 This plugin allows you to extend search in your site by adding a custom post type.
 
-<a href="#" target="_blank">FAQ</a>
-<a href="#" target="_blank">Support</a>
+<a href="http://wordpress.org/extend/plugins/custom-search-plugin/faq/" target="_blank">FAQ</a>
+<a href="http://bestwebsoft.com/plugin/custom-search-plugin/" target="_blank">Support</a>
 
 = Features =
 
@@ -28,7 +28,7 @@ If you create your own language pack or update the existing one, you can send <a
 
 == Installation ==
 
-1. Upload `custom-search` folder to the `/wp-content/plugins/` directory.
+1. Upload `custom-search-plugin` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Site wide Settings are located in "BWS Plugins", "Custom Search".
 
@@ -44,10 +44,16 @@ Go to the Settings page and select custom types to which the search will be carr
 
 == Changelog ==
 
-= 1.01 - 21.02.2012 =
+= V1.02 - 24.02.2012 =
+* Change : Code to include styles and scripts in a plug for the correct SSL verification.
+
+= V1.01 - 21.02.2012 =
 * NEW : Added language files for plugin.
 
 == Upgrade Notice ==
 
-= 1.01 =
+= V1.02 =
+Changed code to include styles and scripts in a plug for the correct SSL verification
+
+= V1.01 =
 Added language files for plugin.
