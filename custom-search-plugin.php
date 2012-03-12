@@ -4,7 +4,7 @@ Plugin Name: Custom Search
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: Custom Search Plugin designed to search for site custom types.
 Author: BestWebSoft
-Version: 1.02
+Version: 1.03
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -43,7 +43,8 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 			array( 'portfolio\/portfolio.php', 'Portfolio', 'http://wordpress.org/extend/plugins/portfolio/', 'http://bestwebsoft.com/plugin/portfolio-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Portfolio+bestwebsoft&plugin-search-input=Search+Plugins', '' ),
 			array( 'gallery-plugin\/gallery-plugin.php', 'Gallery', 'http://wordpress.org/extend/plugins/gallery-plugin/', 'http://bestwebsoft.com/plugin/gallery-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Gallery+Plugin+bestwebsoft&plugin-search-input=Search+Plugins', '' ),
 			array( 'adsense-plugin\/adsense-plugin.php', 'Google AdSense Plugin', 'http://wordpress.org/extend/plugins/adsense-plugin/', 'http://bestwebsoft.com/plugin/google-adsense-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Adsense+Plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=adsense-plugin.php' ),
-			array( 'custom-search-plugin\/custom-search-plugin.php', 'Custom Search Plugin', 'http://wordpress.org/extend/plugins/custom-search-plugin/', 'http://bestwebsoft.com/plugin/custom-search-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Custom+Search+plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=custom_search.php' )
+			array( 'custom-search-plugin\/custom-search-plugin.php', 'Custom Search Plugin', 'http://wordpress.org/extend/plugins/custom-search-plugin/', 'http://bestwebsoft.com/plugin/custom-search-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Custom+Search+plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=custom_search.php' ),
+			array( 'quotes_and_tips\/quotes-and-tips.php', 'Quotes and Tips', 'http://wordpress.org/extend/plugins/quotes-and-tips/', 'http://bestwebsoft.com/plugin/quotes-and-tips/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Quotes+and+Tips+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=quotes-and-tips.php' )
 		);
 		foreach($array_plugins as $plugins) {
 			if( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) ) {
@@ -221,7 +222,7 @@ register_uninstall_hook( __FILE__, 'delete_cstmsrch_settings'); // uninstall plu
 	
 add_action( 'admin_menu', 'add_cstmsrch_admin_menu' );
 add_action( 'admin_init', 'cstmsrch_init' );
-add_action( 'admin_init', 'cstmsrch_admin_head' );
+add_action( 'admin_enqueue_scripts', 'cstmsrch_admin_head' );
 add_action( 'init', 'cstmsrch_options_global' );
 add_filter( 'pre_get_posts', 'cstmsrch_searchfilter' );
 ?>

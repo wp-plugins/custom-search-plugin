@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: custom-search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-24 15:57+0200\n"
-"PO-Revision-Date: 2012-02-24 15:57+0200\n"
+"POT-Creation-Date: 2012-03-12 17:27+0200\n"
+"PO-Revision-Date: 2012-03-12 17:27+0200\n"
 "Last-Translator: BWS <zos@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "MIME-Version: 1.0\n"
@@ -16,67 +16,67 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: custom-search-plugin.php:76
+#: custom-search-plugin.php:77
 msgid "Activated plugins"
 msgstr "Активированные плагины"
 
-#: custom-search-plugin.php:78
-#: custom-search-plugin.php:86
-#: custom-search-plugin.php:94
+#: custom-search-plugin.php:79
+#: custom-search-plugin.php:87
+#: custom-search-plugin.php:95
 msgid "Read more"
 msgstr "Подробнее..."
 
-#: custom-search-plugin.php:78
+#: custom-search-plugin.php:79
 msgid "Settings"
 msgstr "Настройки"
 
-#: custom-search-plugin.php:84
+#: custom-search-plugin.php:85
 msgid "Installed plugins"
 msgstr "Установленные плагины"
 
-#: custom-search-plugin.php:92
+#: custom-search-plugin.php:93
 msgid "Recommended plugins"
 msgstr "Рекомендованные к установке плагины"
 
-#: custom-search-plugin.php:94
+#: custom-search-plugin.php:95
 msgid "Download"
 msgstr "Скачать"
 
-#: custom-search-plugin.php:94
+#: custom-search-plugin.php:95
 #, php-format
 msgid "Install %s"
 msgstr "Установлено %s"
 
-#: custom-search-plugin.php:94
+#: custom-search-plugin.php:95
 msgid "Install now from wordpress.org"
 msgstr "Установить с wordpress.org"
 
-#: custom-search-plugin.php:96
+#: custom-search-plugin.php:97
 msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site"
 msgstr "Если у вас есть какие-то впросы, обращайтесь на plugin@bestwebsoft.com или заполните контактную форму на нашем сайте"
 
-#: custom-search-plugin.php:107
-#: custom-search-plugin.php:185
+#: custom-search-plugin.php:108
+#: custom-search-plugin.php:186
 msgid "Custom Search Options"
 msgstr "Настройки Кастомного поиска"
 
-#: custom-search-plugin.php:107
+#: custom-search-plugin.php:108
 msgid "Custom search"
 msgstr "Кастомный поиск"
 
-#: custom-search-plugin.php:179
+#: custom-search-plugin.php:180
 msgid "Options saved."
 msgstr "Опции сохранены"
 
-#: custom-search-plugin.php:191
+#: custom-search-plugin.php:192
 msgid "Enable Custom search on the:"
 msgstr "Отображать Кастомный поиск для:"
 
-#: custom-search-plugin.php:202
+#: custom-search-plugin.php:203
 msgid "Save Changes"
 msgstr "Сохранить изменения"
 
-#: custom-search-plugin.php:206
+#: custom-search-plugin.php:207
 msgid "Did not match any custom post type."
 msgstr "Не найдено ни одного пользовательского типа сообщение."
 
