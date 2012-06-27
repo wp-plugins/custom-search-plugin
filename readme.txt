@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: custom, type, search, better search, custom type, custom post, custom search, custom search plugin, custom post types search, custom content types, custom post types.
 Requires at least: 3.0
-Tested up to: 3.3.1
-Stable tag: 1.03
+Tested up to: 3.4
+Stable tag: 1.04
 
 This plugin allows you implementation of the search feature according to the custom types on your website.
 
@@ -48,6 +48,9 @@ Go to the Settings page and select custom types which are to be included to the 
 
 == Changelog ==
 
+= V1.04 - 27.06.2012 =
+* Update : We updated all functionality for wordpress 3.4.
+
 = V1.03 - 12.03.2012 =
 * Changed : BWS plugins section. 
 
@@ -58,6 +61,9 @@ Go to the Settings page and select custom types which are to be included to the 
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.04 =
+We updated all functionality for wordpress 3.4.
 
 = V1.03 =
 BWS plugins section has been changed. 

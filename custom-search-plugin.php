@@ -4,7 +4,7 @@ Plugin Name: Custom Search
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: Custom Search Plugin designed to search for site custom types.
 Author: BestWebSoft
-Version: 1.03
+Version: 1.04
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -162,9 +162,7 @@ if( ! function_exists( 'cstmsrch_searchfilter' ) ) {
 		if ( $query->is_search ){
 			$cstmsrch_post_standart_types = array( 'post', 'page', 'revision', 'attachment', 'nav_menu_item' );
 			$cstmsrch_result_merge = array_merge( $cstmsrch_post_standart_types, $cstmsrch_options );	
-			foreach ( $cstmsrch_result_merge as $key => $value ){ 
-				$query->set( 'post_type', $value );				
-			}						
+			$query->set( 'post_type', $cstmsrch_result_merge );				
 		}
 		return $query;
 	}
