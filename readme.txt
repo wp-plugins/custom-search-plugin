@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: custom, type, search, better search, custom type, custom post, custom search, custom search plugin, custom post types search, custom content types, custom post types.
 Requires at least: 3.0
-Tested up to: 3.4
-Stable tag: 1.04
+Tested up to: 3.4.1
+Stable tag: 1.05
 
 This plugin allows you implementation of the search feature according to the custom types on your website.
 
@@ -22,6 +22,7 @@ This plugin allows you to extend search functionality at your website by adding 
 = Translation =
 
 * Dutch (nl_NL)
+* Hebrew (he_IL) (thanks to Sagive SEO)
 * Russian (ru_RU)
 
 If you create your own language pack or update an existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text in PO and MO files</a> for <a href="http://bestwebsoft.com/" target="_blank">BWS</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
@@ -48,6 +49,10 @@ Go to the Settings page and select custom types which are to be included to the 
 
 == Changelog ==
 
+= V1.05 - 10.07.2012 =
+* NEW : Hebrew language file is added to the plugin.
+* Update : We updated all functionality for wordpress 3.4.1.
+
 = V1.04 - 27.06.2012 =
 * Update : We updated all functionality for wordpress 3.4.
 
@@ -61,6 +66,9 @@ Go to the Settings page and select custom types which are to be included to the 
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.05 =
+Hebrew language file is added to the plugin. We updated all functionality for wordpress 3.4.1.
 
 = V1.04 =
 We updated all functionality for wordpress 3.4.
