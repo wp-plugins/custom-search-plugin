@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Custom Search v1.04\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-10 11:02+0300\n"
-"PO-Revision-Date: 2012-07-10 11:02+0300\n"
+"POT-Creation-Date: 2012-07-24 19:26+0300\n"
+"PO-Revision-Date: 2012-07-24 19:26+0300\n"
 "Last-Translator: zos <zos@bestwebsoft.com>\n"
 "Language-Team: Sagive SEO <info@sagive.co.il>\n"
 "Language: \n"
@@ -94,7 +94,7 @@ msgid "Save Changes"
 msgstr "שמור שינויים"
 
 # @ custom-search
-#: custom-search-plugin.php:205
+#: custom-search-plugin.php:206
 msgid "Did not match any custom post type."
 msgstr "לא תאם אף סוג פוסט מותאם אישית."
 

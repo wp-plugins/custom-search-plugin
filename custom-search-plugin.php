@@ -4,7 +4,7 @@ Plugin Name: Custom Search
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: Custom Search Plugin designed to search for site custom types.
 Author: BestWebSoft
-Version: 1.05
+Version: 1.06
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -172,7 +172,7 @@ if( ! function_exists( 'cstmsrch_settings_page' ) ){
 	function  cstmsrch_settings_page(){
 	global $wpdb, $cstmsrch_options;
 	$cstmsrch_necessary_variables = array();
-	if( isset( $_REQUEST['cstmsrch_submit'] ) ) {
+	if( isset( $_REQUEST['cstmsrch_submit'] ) && check_admin_referer( plugin_basename(__FILE__), 'cstmsrch_nonce_name' ) ) {
 		$cstmsrch_options = isset( $_REQUEST['cstmsrch_options'] ) ? $_REQUEST['cstmsrch_options'] : array() ;
 		update_option( 'bws_custom_search', $cstmsrch_options );
 		$message = __( "Options saved." , 'custom-searc' );	
@@ -200,6 +200,7 @@ if( ! function_exists( 'cstmsrch_settings_page' ) ){
 				<p class="submit">
 					<input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
 				</p>
+				<?php wp_nonce_field( plugin_basename(__FILE__), 'cstmsrch_nonce_name' ); ?>
 			</form>
 		<?php } else { ?>
 			<?php _e( 'Did not match any custom post type.', 'custom-search' ); ?>

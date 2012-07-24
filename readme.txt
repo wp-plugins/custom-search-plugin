@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: custom, type, search, better search, custom type, custom post, custom search, custom search plugin, custom post types search, custom content types, custom post types.
 Requires at least: 3.0
 Tested up to: 3.4.1
-Stable tag: 1.05
+Stable tag: 1.06
 
 This plugin allows you implementation of the search feature according to the custom types on your website.
 
@@ -49,6 +49,9 @@ Go to the Settings page and select custom types which are to be included to the 
 
 == Changelog ==
 
+= V1.06 - 24.07.2012 =
+* Bugfix : Cross Site Request Forgery bug was fixed. 
+
 = V1.05 - 10.07.2012 =
 * NEW : Hebrew language file is added to the plugin.
 * Update : We updated all functionality for wordpress 3.4.1.
@@ -66,6 +69,9 @@ Go to the Settings page and select custom types which are to be included to the 
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.06 =
+Cross Site Request Forgery bug was fixed. 
 
 = V1.05 =
 Hebrew language file is added to the plugin. We updated all functionality for wordpress 3.4.1.
