@@ -5,6 +5,8 @@ Tags: custom, type, search, better search, custom type, custom post, custom sear
 Requires at least: 3.0
 Tested up to: 3.5
 Stable tag: 1.07
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 This plugin allows you implementation of the search feature according to the custom types on your website.
 
