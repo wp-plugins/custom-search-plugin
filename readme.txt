@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: custom, type, search, better search, custom type, custom post, custom search, custom search plugin, custom post types search, custom content types, custom post types.
 Requires at least: 3.0
-Tested up to: 3.5
-Stable tag: 1.07
+Tested up to: 3.5.1
+Stable tag: 1.08
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,10 @@ Go to the Settings page and select custom types which are to be included to the 
 
 == Changelog ==
 
+= V1.08 - 31.01.2013 =
+* Bugfix : Bugs in admin menu were fixed.
+* Update : We updated all functionality for wordpress 3.5.1.
+
 = V1.07 - 21.12.2012 =
 * Update : We updated all functionality for wordpress 3.5.
 
@@ -74,6 +78,9 @@ Go to the Settings page and select custom types which are to be included to the 
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.08 =
+Bugs in admin menu were fixed. We updated all functionality for wordpress 3.5.1.
 
 = V1.07 =
 We updated all functionality for wordpress 3.5.
