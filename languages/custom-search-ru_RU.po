@@ -2,82 +2,84 @@ msgid ""
 msgstr ""
 "Project-Id-Version: custom-search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-21 18:55+0200\n"
-"PO-Revision-Date: 2012-12-21 18:55+0200\n"
-"Last-Translator: zos <zos@bestwebsoft.com>\n"
+"POT-Creation-Date: 2013-04-17 13:36+0300\n"
+"PO-Revision-Date: 2013-04-17 13:36+0300\n"
+"Last-Translator: \n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
-"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ru_RU\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: custom-search-plugin.php:77
+#: custom-search-plugin.php:79
 msgid "Activated plugins"
 msgstr "Активированные плагины"
 
-#: custom-search-plugin.php:79 custom-search-plugin.php:87
-#: custom-search-plugin.php:95
+#: custom-search-plugin.php:81
+#: custom-search-plugin.php:89
+#: custom-search-plugin.php:97
 msgid "Read more"
 msgstr "Подробнее..."
 
-#: custom-search-plugin.php:79
+#: custom-search-plugin.php:81
 msgid "Settings"
 msgstr "Настройки"
 
-#: custom-search-plugin.php:85
+#: custom-search-plugin.php:87
 msgid "Installed plugins"
 msgstr "Установленные плагины"
 
-#: custom-search-plugin.php:93
+#: custom-search-plugin.php:95
 msgid "Recommended plugins"
 msgstr "Рекомендованные к установке плагины"
 
-#: custom-search-plugin.php:95
+#: custom-search-plugin.php:97
 msgid "Download"
 msgstr "Скачать"
 
-#: custom-search-plugin.php:95
+#: custom-search-plugin.php:97
 #, php-format
 msgid "Install %s"
 msgstr "Установлено %s"
 
-#: custom-search-plugin.php:95
+#: custom-search-plugin.php:97
 msgid "Install now from wordpress.org"
 msgstr "Установить с wordpress.org"
 
-#: custom-search-plugin.php:97
-msgid ""
-"If you have any questions, please contact us via plugin@bestwebsoft.com or "
-"fill in our contact form on our site"
-msgstr ""
-"Если у вас есть какие-то впросы, обращайтесь на plugin@bestwebsoft.com или "
-"заполните контактную форму на нашем сайте"
+#: custom-search-plugin.php:99
+msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill out the contact form on our website"
+msgstr "Если у вас есть какие-то вопросы, обращайтесь на plugin@bestwebsoft.com или заполните контактную форму на нашем сайте"
 
-#: custom-search-plugin.php:108 custom-search-plugin.php:184
-msgid "Custom Search Options"
+#: custom-search-plugin.php:110
+#: custom-search-plugin.php:186
+msgid "Custom Search Settings"
 msgstr "Настройки Кастомного поиска"
 
-#: custom-search-plugin.php:108
+#: custom-search-plugin.php:110
 msgid "Custom search"
 msgstr "Кастомный поиск"
 
-#: custom-search-plugin.php:178
-msgid "Options saved."
-msgstr "Опции сохранены"
+#: custom-search-plugin.php:180
+msgid "Settings saved"
+msgstr "Настройки сохранены"
 
-#: custom-search-plugin.php:190
-msgid "Enable Custom search on the:"
+#: custom-search-plugin.php:192
+msgid "Enable Custom search for:"
 msgstr "Отображать Кастомный поиск для:"
 
-#: custom-search-plugin.php:201
+#: custom-search-plugin.php:203
 msgid "Save Changes"
 msgstr "Сохранить изменения"
 
-#: custom-search-plugin.php:206
-msgid "Did not match any custom post type."
-msgstr "Не найдено ни одного пользовательского типа сообщение."
+#: custom-search-plugin.php:208
+msgid "No custom post type found."
+msgstr "Не найдено ни одного пользовательского типа сообщения."
+
+#~ msgid "Options saved."
+#~ msgstr "Опции сохранены"
+

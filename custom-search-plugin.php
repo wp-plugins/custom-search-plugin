@@ -4,7 +4,7 @@ Plugin Name: Custom Search
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: Custom Search Plugin designed to search for site custom types.
 Author: BestWebSoft
-Version: 1.09
+Version: 1.10
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -96,7 +96,7 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 				<?php foreach( $array_recomend as $recomend_plugin ) { ?>
 				<div style="float:left; width:200px;"><?php echo $recomend_plugin['title']; ?></div> <p><a href="<?php echo $recomend_plugin['link']; ?>" target="_blank"><?php echo __( "Read more", 'captcha'); ?></a> <a href="<?php echo $recomend_plugin['href']; ?>" target="_blank"><?php echo __( "Download", 'captcha'); ?></a> <a class="install-now" href="<?php echo get_bloginfo( "url" ) . $recomend_plugin['slug']; ?>" title="<?php esc_attr( sprintf( __( 'Install %s' ), $recomend_plugin['title'] ) ) ?>" target="_blank"><?php echo __( 'Install now from wordpress.org', 'captcha' ) ?></a></p>
 				<?php } ?>
-				<span style="color: rgb(136, 136, 136); font-size: 10px;"><?php _e( 'If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site', 'captcha' ); ?> <a href="http://bestwebsoft.com/contact/">http://bestwebsoft.com/contact/</a></span>
+				<span style="color: rgb(136, 136, 136); font-size: 10px;"><?php _e( 'If you have any questions, please contact us via plugin@bestwebsoft.com or fill out the contact form on our website', 'captcha' ); ?> <a href="http://bestwebsoft.com/contact/">http://bestwebsoft.com/contact/</a></span>
 			</div>
 			<?php } ?>
 		</div>
@@ -107,7 +107,7 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 if( ! function_exists( 'add_cstmsrch_admin_menu' ) ) {
 	function add_cstmsrch_admin_menu() {
 		add_menu_page( 'BWS Plugins', 'BWS Plugins', 'manage_options', 'bws_plugins', 'bws_add_menu_render', plugins_url("images/px.png", __FILE__), 1001); 
-		add_submenu_page( 'bws_plugins', __( 'Custom Search Options', 'custom-search' ), __( 'Custom search', 'custom-search' ), 'manage_options', "custom_search.php", 'cstmsrch_settings_page' );
+		add_submenu_page( 'bws_plugins', __( 'Custom Search Settings', 'custom-search' ), __( 'Custom search', 'custom-search' ), 'manage_options', "custom_search.php", 'cstmsrch_settings_page' );
 	}
 }
 
@@ -177,19 +177,19 @@ if( ! function_exists( 'cstmsrch_settings_page' ) ){
 	if( isset( $_REQUEST['cstmsrch_submit'] ) && check_admin_referer( plugin_basename(__FILE__), 'cstmsrch_nonce_name' ) ) {
 		$cstmsrch_options = isset( $_REQUEST['cstmsrch_options'] ) ? $_REQUEST['cstmsrch_options'] : array() ;
 		update_option( 'bws_custom_search', $cstmsrch_options );
-		$message = __( "Options saved." , 'custom-searc' );	
+		$message = __( "Settings saved" , 'custom-searc' );	
 	}
 	$cstmsrch_result = $wpdb->get_results( "SELECT post_type FROM ". $wpdb->posts ." WHERE post_type NOT IN ('revision', 'page', 'post', 'attachment', 'nav_menu_item') GROUP BY post_type" );	
 	?>
 	<div class="wrap">
 		<div class="icon32 icon32-bws" id="icon-options-general"></div>
-		<h2><?php _e( 'Custom Search Options', 'custom-search' ); ?></h2>
+		<h2><?php _e( 'Custom Search Settings', 'custom-search' ); ?></h2>
 		<div class="updated fade" <?php if( ! isset( $_REQUEST['cstmsrch_submit'] ) || $error != "" ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
 		<?php if( count( $cstmsrch_result ) > 0 ) { ?>
-			<form method="post" action="">
+			<form method="post" action="" style="margin-top: 10px;">
 				<table class="form-table">
 					<tr valign="top">
-						<th scope="row"><?php _e( 'Enable Custom search on the:', 'custom-search' ); ?> </th>
+						<th scope="row"><?php _e( 'Enable Custom search for:', 'custom-search' ); ?> </th>
 						<td>
 							<?php 
 							foreach ( $cstmsrch_result as $key => $value ) { ?>
@@ -205,7 +205,7 @@ if( ! function_exists( 'cstmsrch_settings_page' ) ){
 				<?php wp_nonce_field( plugin_basename(__FILE__), 'cstmsrch_nonce_name' ); ?>
 			</form>
 		<?php } else { ?>
-			<?php _e( 'Did not match any custom post type.', 'custom-search' ); ?>
+			<?php _e( 'No custom post type found.', 'custom-search' ); ?>
 		<?php } ?>
 		</div>
 	<?php

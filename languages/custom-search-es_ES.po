@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: custom-search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-20 09:51+0300\n"
-"PO-Revision-Date: 2013-02-20 09:52+0300\n"
+"POT-Creation-Date: 2013-04-17 13:36+0300\n"
+"PO-Revision-Date: 2013-04-17 13:36+0300\n"
 "Last-Translator: \n"
 "Language-Team: Fernando De León <mrjosefernando@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -63,13 +63,15 @@ msgstr "Instalar ahora desde wordpress.org"
 
 # @ captcha
 #: custom-search-plugin.php:99
-msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site"
+#, fuzzy
+msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill out the contact form on our website"
 msgstr "Si usted tiene alguna pregunta, comun&iacute;quese con nosotros v&iacute;a plugin@bestwebsoft.com o rellene nuestro formulario de contacto en nuestro sitio"
 
 # @ custom-search
 #: custom-search-plugin.php:110
 #: custom-search-plugin.php:186
-msgid "Custom Search Options"
+#, fuzzy
+msgid "Custom Search Settings"
 msgstr "Configuraci&oacute;n de B&uacute;squeda personalizada"
 
 # @ custom-search
@@ -77,14 +79,16 @@ msgstr "Configuraci&oacute;n de B&uacute;squeda personalizada"
 msgid "Custom search"
 msgstr " B&uacute;squeda personalizada"
 
-# @ custom-searc
+# @ captcha
 #: custom-search-plugin.php:180
-msgid "Options saved."
-msgstr "Configuraci&oacute;n guardada."
+#, fuzzy
+msgid "Settings saved"
+msgstr "Configuraci&oacute;n"
 
 # @ custom-search
 #: custom-search-plugin.php:192
-msgid "Enable Custom search on the:"
+#, fuzzy
+msgid "Enable Custom search for:"
 msgstr "Activar la b&uacute;squeda personalizada en:"
 
 # @ default
@@ -94,6 +98,7 @@ msgstr "Guardar Cambios"
 
 # @ custom-search
 #: custom-search-plugin.php:208
-msgid "Did not match any custom post type."
+#, fuzzy
+msgid "No custom post type found."
 msgstr "No ha producido ningún tipo de mensaje personalizado."
 
