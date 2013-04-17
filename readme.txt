@@ -26,7 +26,7 @@ This plugin allows you to extend search functionality of your website by adding 
 * Dutch (nl_NL)
 * Hebrew (he_IL) (thanks to Sagive SEO)
 * Russian (ru_RU)
-* Spanish (es_ES)(thanks to <a herf="mailto:mrjosefernando@gmail.com">Fernando De León</a>)
+* Spanish (es_ES)(thanks to <a href="mailto:mrjosefernando@gmail.com">Fernando De León</a>)
 
 If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text in PO and MO files</a> for <a href="http://bestwebsoft.com/" target="_blank">BWS</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
 
