@@ -1,0 +1,99 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: custom-search\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-05-06 14:21+0300\n"
+"PO-Revision-Date: 2013-05-06 14:21+0300\n"
+"Last-Translator: \n"
+"Language-Team: Fernando De Le&oacute;n <mrjosefernando@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: he_IL\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ captcha
+#: custom-search-plugin.php:79
+msgid "Activated plugins"
+msgstr "Plugins activados"
+
+# @ captcha
+#: custom-search-plugin.php:81
+#: custom-search-plugin.php:89
+#: custom-search-plugin.php:97
+msgid "Read more"
+msgstr "Leer m&aacute;s"
+
+# @ captcha
+#: custom-search-plugin.php:81
+msgid "Settings"
+msgstr "Configuraci&oacute;n"
+
+# @ captcha
+#: custom-search-plugin.php:87
+msgid "Installed plugins"
+msgstr "Plugins instalados"
+
+# @ captcha
+#: custom-search-plugin.php:95
+msgid "Recommended plugins"
+msgstr "Plugins recomendados"
+
+# @ captcha
+#: custom-search-plugin.php:97
+msgid "Download"
+msgstr "Descargar"
+
+# @ default
+#: custom-search-plugin.php:97
+#, php-format
+msgid "Install %s"
+msgstr "Instalar %s"
+
+# @ captcha
+#: custom-search-plugin.php:97
+msgid "Install now from wordpress.org"
+msgstr "Instalar ahora desde wordpress.org"
+
+# @ captcha
+#: custom-search-plugin.php:99
+msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill out the contact form on our website"
+msgstr "Si usted tiene alguna pregunta, comun&iacute;quese con nosotros v&iacute;a plugin@bestwebsoft.com o rellene nuestro formulario de contacto en nuestro sitio"
+
+# @ custom-search
+#: custom-search-plugin.php:110
+#: custom-search-plugin.php:186
+msgid "Custom Search Settings"
+msgstr "Configuraci&oacute;n de B&uacute;squeda personalizada"
+
+# @ custom-search
+#: custom-search-plugin.php:110
+msgid "Custom search"
+msgstr " B&uacute;squeda personalizada"
+
+# @ captcha
+#: custom-search-plugin.php:180
+msgid "Settings saved"
+msgstr "Configuraci&oacute;n"
+
+# @ custom-search
+#: custom-search-plugin.php:192
+msgid "Enable Custom search for:"
+msgstr "Activar la b&uacute;squeda personalizada en:"
+
+# @ default
+#: custom-search-plugin.php:203
+msgid "Save Changes"
+msgstr "Guardar Cambios"
+
+# @ custom-search
+#: custom-search-plugin.php:208
+msgid "No custom post type found."
+msgstr "No ha producido ning&uacute;n tipo de mensaje personalizado."
+
