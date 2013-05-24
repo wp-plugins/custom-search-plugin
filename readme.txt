@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: custom, type, search, better search, custom type, custom post, custom search, custom search plugin, custom post types search, custom content types, custom post types.
 Requires at least: 3.0
 Tested up to: 3.5.1
-Stable tag: 1.11
+Stable tag: 1.12
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,6 +56,10 @@ Go to the Settings page and select custom types that you would like to add to th
 
 == Changelog ==
 
+= V1.12 - 24.05.2013 =
+* Bugfix : The error related to undefined variable is fixed. 
+* Changed : BWS plugins section.
+
 = V1.11 - 06.05.2013 =
 * Update : The Spanish language is updated in the plugin.
 
@@ -92,6 +96,9 @@ Go to the Settings page and select custom types that you would like to add to th
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.12 =
+The error related to undefined variable is fixed. BWS plugins section.
 
 = V1.11 =
 The Spanish language is updated in the plugin.
