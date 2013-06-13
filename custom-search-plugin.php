@@ -25,10 +25,9 @@ License: GPLv2 or later
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-if( ! function_exists( 'bws_add_menu_render' ) ) {
+if ( ! function_exists( 'bws_add_menu_render' ) ) {
 	function bws_add_menu_render() {
 		global $title;
-
 		$active_plugins = get_option('active_plugins');
 		$all_plugins = get_plugins();
 
@@ -50,13 +49,13 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 			array( 'updater\/updater.php', 'Updater', 'http://bestwebsoft.com/plugin/updater-plugin/', 'http://bestwebsoft.com/plugin/updater-plugin/#download', '/wp-admin/plugin-install.php?tab=search&s=updater+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=updater-options' )
 		);
 		foreach ( $array_plugins as $plugins ) {
-			if( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) ) {
+			if ( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) ) {
 				$array_activate[$count_activate]["title"] = $plugins[1];
 				$array_activate[$count_activate]["link"] = $plugins[2];
 				$array_activate[$count_activate]["href"] = $plugins[3];
 				$array_activate[$count_activate]["url"]	= $plugins[5];
 				$count_activate++;
-			} else if( array_key_exists(str_replace( "\\", "", $plugins[0]), $all_plugins ) ) {
+			} elseif ( array_key_exists(str_replace( "\\", "", $plugins[0]), $all_plugins ) ) {
 				$array_install[$count_install]["title"] = $plugins[1];
 				$array_install[$count_install]["link"]	= $plugins[2];
 				$array_install[$count_install]["href"]	= $plugins[3];
@@ -77,13 +76,13 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 			array( 'gallery-plugin-pro\/gallery-plugin-pro.php', 'Gallery Pro', 'http://bestwebsoft.com/plugin/gallery-pro/', 'http://bestwebsoft.com/plugin/gallery-pro/#purchase', 'admin.php?page=gallery-plugin-pro.php' )
 		);
 		foreach ( $array_plugins_pro as $plugins ) {
-			if( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) ) {
+			if ( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) ) {
 				$array_activate_pro[$count_activate_pro]["title"] = $plugins[1];
 				$array_activate_pro[$count_activate_pro]["link"] = $plugins[2];
 				$array_activate_pro[$count_activate_pro]["href"] = $plugins[3];
 				$array_activate_pro[$count_activate_pro]["url"]	= $plugins[4];
 				$count_activate_pro++;
-			} else if( array_key_exists(str_replace( "\\", "", $plugins[0]), $all_plugins ) ) {
+			} elseif( array_key_exists(str_replace( "\\", "", $plugins[0]), $all_plugins ) ) {
 				$array_install_pro[$count_install_pro]["title"] = $plugins[1];
 				$array_install_pro[$count_install_pro]["link"]	= $plugins[2];
 				$array_install_pro[$count_install_pro]["href"]	= $plugins[3];
@@ -98,58 +97,59 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 		<div class="wrap">
 			<div class="icon32 icon32-bws" id="icon-options-general"></div>
 			<h2><?php echo $title;?></h2>
-			<h3>&emsp;&emsp; <?php _e( 'Pro plugins', 'custom-searc' ); ?></h3>
+			<h3 style="color: blue"><?php _e( 'Pro plugins', 'custom-search' ); ?></h3>
 			<?php if( 0 < $count_activate_pro ) { ?>
-			<div>
-				<h4><?php _e( 'Activated plugins', 'custom-searc' ); ?></h4>
+			<div style="padding-left:15px;">
+				<h4><?php _e( 'Activated plugins', 'custom-search' ); ?></h4>
 				<?php foreach ( $array_activate_pro as $activate_plugin ) { ?>
-				<div style="float:left; width:200px;"><?php echo $activate_plugin["title"]; ?></div> <p><a href="<?php echo $activate_plugin["link"]; ?>" target="_blank"><?php echo __( "Read more", 'custom-searc' ); ?></a> <a href="<?php echo $activate_plugin["url"]; ?>"><?php echo __( "Settings", 'custom-searc' ); ?></a></p>
+				<div style="float:left; width:200px;"><?php echo $activate_plugin["title"]; ?></div> <p><a href="<?php echo $activate_plugin["link"]; ?>" target="_blank"><?php echo __( "Read more", 'custom-search' ); ?></a> <a href="<?php echo $activate_plugin["url"]; ?>"><?php echo __( "Settings", 'custom-search' ); ?></a></p>
 				<?php } ?>
 			</div>
 			<?php } ?>
 			<?php if( 0 < $count_install_pro ) { ?>
-			<div>
-				<h4><?php _e( 'Installed plugins', 'custom-searc' ); ?></h4>
+			<div style="padding-left:15px;">
+				<h4><?php _e( 'Installed plugins', 'custom-search' ); ?></h4>
 				<?php foreach ( $array_install_pro as $install_plugin) { ?>
-				<div style="float:left; width:200px;"><?php echo $install_plugin["title"]; ?></div> <p><a href="<?php echo $install_plugin["link"]; ?>" target="_blank"><?php echo __( "Read more", 'custom-searc' ); ?></a></p>
+				<div style="float:left; width:200px;"><?php echo $install_plugin["title"]; ?></div> <p><a href="<?php echo $install_plugin["link"]; ?>" target="_blank"><?php echo __( "Read more", 'custom-search' ); ?></a></p>
 				<?php } ?>
 			</div>
 			<?php } ?>
 			<?php if( 0 < $count_recomend_pro ) { ?>
-			<div>
-				<h4><?php _e( 'Recommended plugins', 'custom-searc' ); ?></h4>
+			<div style="padding-left:15px;">
+				<h4><?php _e( 'Recommended plugins', 'custom-search' ); ?></h4>
 				<?php foreach ( $array_recomend_pro as $recomend_plugin ) { ?>
-				<div style="float:left; width:200px;"><?php echo $recomend_plugin["title"]; ?></div> <p><a href="<?php echo $recomend_plugin["link"]; ?>" target="_blank"><?php echo __( "Read more", 'custom-searc' ); ?></a> <a href="<?php echo $recomend_plugin["href"]; ?>" target="_blank"><?php echo __( "Purchase", 'custom-searc' ); ?></a></p>
+				<div style="float:left; width:200px;"><?php echo $recomend_plugin["title"]; ?></div> <p><a href="<?php echo $recomend_plugin["link"]; ?>" target="_blank"><?php echo __( "Read more", 'custom-search' ); ?></a> <a href="<?php echo $recomend_plugin["href"]; ?>" target="_blank"><?php echo __( "Purchase", 'custom-search' ); ?></a></p>
 				<?php } ?>
 			</div>
 			<?php } ?>
 			<br />
-			<h3>&emsp;&emsp;<?php _e( 'Free plugins', 'custom-searc' ); ?></h3>
+			<h3 style="color: green"><?php _e( 'Free plugins', 'custom-search' ); ?></h3>
 			<?php if( 0 < $count_activate ) { ?>
-			<div>
-				<h4><?php _e( 'Activated plugins', 'custom-searc' ); ?></h4>
+			<div style="padding-left:15px;">
+				<h4><?php _e( 'Activated plugins', 'custom-search' ); ?></h4>
 				<?php foreach( $array_activate as $activate_plugin ) { ?>
-				<div style="float:left; width:200px;"><?php echo $activate_plugin["title"]; ?></div> <p><a href="<?php echo $activate_plugin["link"]; ?>" target="_blank"><?php echo __( "Read more", 'custom-searc' ); ?></a> <a href="<?php echo $activate_plugin["url"]; ?>"><?php echo __( "Settings", 'custom-searc' ); ?></a></p>
+				<div style="float:left; width:200px;"><?php echo $activate_plugin["title"]; ?></div> <p><a href="<?php echo $activate_plugin["link"]; ?>" target="_blank"><?php echo __( "Read more", 'custom-search' ); ?></a> <a href="<?php echo $activate_plugin["url"]; ?>"><?php echo __( "Settings", 'custom-search' ); ?></a></p>
 				<?php } ?>
 			</div>
 			<?php } ?>
 			<?php if( 0 < $count_install ) { ?>
-			<div>
-				<h4><?php _e( 'Installed plugins', 'custom-searc' ); ?></h4>
+			<div style="padding-left:15px;">
+				<h4><?php _e( 'Installed plugins', 'custom-search' ); ?></h4>
 				<?php foreach ( $array_install as $install_plugin ) { ?>
-				<div style="float:left; width:200px;"><?php echo $install_plugin["title"]; ?></div> <p><a href="<?php echo $install_plugin["link"]; ?>" target="_blank"><?php echo __( "Read more", 'custom-searc' ); ?></a></p>
+				<div style="float:left; width:200px;"><?php echo $install_plugin["title"]; ?></div> <p><a href="<?php echo $install_plugin["link"]; ?>" target="_blank"><?php echo __( "Read more", 'custom-search' ); ?></a></p>
 				<?php } ?>
 			</div>
 			<?php } ?>
 			<?php if( 0 < $count_recomend ) { ?>
-			<div>
-				<h4><?php _e( 'Recommended plugins', 'custom-searc' ); ?></h4>
+			<div style="padding-left:15px;">
+				<h4><?php _e( 'Recommended plugins', 'custom-search' ); ?></h4>
 				<?php foreach ( $array_recomend as $recomend_plugin ) { ?>
-				<div style="float:left; width:200px;"><?php echo $recomend_plugin["title"]; ?></div> <p><a href="<?php echo $recomend_plugin["link"]; ?>" target="_blank"><?php echo __( "Read more", 'custom-searc' ); ?></a> <a href="<?php echo $recomend_plugin["href"]; ?>" target="_blank"><?php echo __( "Download", 'custom-searc' ); ?></a> <a class="install-now" href="<?php echo get_bloginfo( "url" ) . $recomend_plugin["slug"]; ?>" title="<?php esc_attr( sprintf( __( 'Install %s' ), $recomend_plugin["title"] ) ) ?>" target="_blank"><?php echo __( 'Install now from wordpress.org', 'custom-searc' ) ?></a></p>
+				<div style="float:left; width:200px;"><?php echo $recomend_plugin["title"]; ?></div> <p><a href="<?php echo $recomend_plugin["link"]; ?>" target="_blank"><?php echo __( "Read more", 'custom-search' ); ?></a> <a href="<?php echo $recomend_plugin["href"]; ?>" target="_blank"><?php echo __( "Download", 'custom-search' ); ?></a> <a class="install-now" href="<?php echo get_bloginfo( "url" ) . $recomend_plugin["slug"]; ?>" title="<?php esc_attr( sprintf( __( 'Install %s' ), $recomend_plugin["title"] ) ) ?>" target="_blank"><?php echo __( 'Install now from wordpress.org', 'custom-search' ) ?></a></p>
 				<?php } ?>
 			</div>
-			<?php } ?>			
-			<span style="color: rgb(136, 136, 136); font-size: 10px;"><?php _e( 'If you have any questions, please contact us via', 'custom-searc' ); ?> <a href="http://support.bestwebsoft.com">http://support.bestwebsoft.com</a></span>
+			<?php } ?>	
+			<br />		
+			<span style="color: rgb(136, 136, 136); font-size: 10px;"><?php _e( 'If you have any questions, please contact us via', 'custom-search' ); ?> <a href="http://support.bestwebsoft.com">http://support.bestwebsoft.com</a></span>
 		</div>
 	<?php }
 }
@@ -227,7 +227,7 @@ if( ! function_exists( 'cstmsrch_settings_page' ) ){
 	if( isset( $_REQUEST['cstmsrch_submit'] ) && check_admin_referer( plugin_basename(__FILE__), 'cstmsrch_nonce_name' ) ) {
 		$cstmsrch_options = isset( $_REQUEST['cstmsrch_options'] ) ? $_REQUEST['cstmsrch_options'] : array() ;
 		update_option( 'bws_custom_search', $cstmsrch_options );
-		$message = __( "Settings saved" , 'custom-searc' );	
+		$message = __( "Settings saved" , 'custom-search' );	
 	}
 	$cstmsrch_result = $wpdb->get_results( "SELECT post_type FROM ". $wpdb->posts ." WHERE post_type NOT IN ('revision', 'page', 'post', 'attachment', 'nav_menu_item') GROUP BY post_type" );	
 	?>
