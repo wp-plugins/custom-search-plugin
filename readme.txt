@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: custom, type, search, better search, custom type, custom post, custom search, custom search plugin, custom post types search, custom content types, custom post types.
 Requires at least: 3.0
-Tested up to: 3.5.2
-Stable tag: 1.13
+Tested up to: 3.6
+Stable tag: 1.14
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,6 +56,11 @@ Go to the Settings page and select custom types that you would like to add to th
 
 == Changelog ==
 
+= V1.14 - 04.09.2013 =
+* Update : We updated all functionality for wordpress 3.6.
+* Update : Function for displaying BWS plugins section placed in a separate file and has own language files.
+* NEW : Added additional links on the plugin page.
+
 = V1.13 - 18.07.2013 =
 * NEW : Added an ability to view and send system information by mail.
 * Update : We updated all functionality for wordpress 3.5.2.
@@ -100,6 +105,9 @@ Go to the Settings page and select custom types that you would like to add to th
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.14 =
+We updated all functionality for wordpress 3.6. Function for displaying BWS plugins section placed in a separate file and has own language files. Added additional links on the plugin page.
 
 = V1.13 =
 Added an ability to view and send system information by mail. We updated all functionality for wordpress 3.5.2.
