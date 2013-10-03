@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: custom-search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-04 14:59+0300\n"
-"PO-Revision-Date: 2013-09-04 14:59+0300\n"
+"POT-Creation-Date: 2013-10-02 14:57+0300\n"
+"PO-Revision-Date: 2013-10-02 14:57+0300\n"
 "Last-Translator: \n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "MIME-Version: 1.0\n"
@@ -16,34 +16,47 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: custom-search-plugin.php:32
-#: custom-search-plugin.php:109
+#: custom-search-plugin.php:33
+#: custom-search-plugin.php:110
 #, fuzzy
 msgid "Custom Search Settings"
 msgstr "Custom Search Options"
 
-#: custom-search-plugin.php:32
+#: custom-search-plugin.php:33
 msgid "Custom search"
 msgstr "Custom search"
 
-#: custom-search-plugin.php:103
+#: custom-search-plugin.php:104
 #, fuzzy
 msgid "Settings saved"
 msgstr "Instellingen"
 
-#: custom-search-plugin.php:115
+#: custom-search-plugin.php:116
 #, fuzzy
 msgid "Enable Custom search for:"
 msgstr "Schakel Custom search in bij:"
 
-#: custom-search-plugin.php:126
+#: custom-search-plugin.php:127
 msgid "Save Changes"
 msgstr "wijzigingen opslaan"
 
-#: custom-search-plugin.php:131
+#: custom-search-plugin.php:132
 #, fuzzy
 msgid "No custom post type found."
 msgstr "Leverde geen passende maat bericht soort"
+
+#: custom-search-plugin.php:154
+#: custom-search-plugin.php:165
+msgid "Settings"
+msgstr "Instellingen"
+
+#: custom-search-plugin.php:166
+msgid "FAQ"
+msgstr ""
+
+#: custom-search-plugin.php:167
+msgid "Support"
+msgstr ""
 
 #, fuzzy
 #~ msgid "Pro plugins"
@@ -52,8 +65,6 @@ msgstr "Leverde geen passende maat bericht soort"
 #~ msgstr "Geactiveerde plugins"
 #~ msgid "Read more"
 #~ msgstr "Lees meer"
-#~ msgid "Settings"
-#~ msgstr "Instellingen"
 #~ msgid "Installed plugins"
 #~ msgstr "Geïnstalleerde plugins"
 #~ msgid "Recommended plugins"

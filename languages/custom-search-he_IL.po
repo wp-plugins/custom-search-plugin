@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: custom-search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-04 14:58+0300\n"
-"PO-Revision-Date: 2013-09-04 14:59+0300\n"
+"POT-Creation-Date: 2013-10-02 14:57+0300\n"
+"PO-Revision-Date: 2013-10-02 14:57+0300\n"
 "Last-Translator: \n"
 "Language-Team: Sagive SEO <info@sagive.co.il>\n"
 "MIME-Version: 1.0\n"
@@ -19,39 +19,53 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 # @ custom-search
-#: custom-search-plugin.php:32
-#: custom-search-plugin.php:109
+#: custom-search-plugin.php:33
+#: custom-search-plugin.php:110
 #, fuzzy
 msgid "Custom Search Settings"
 msgstr "אפשרויות חיפוש מותאם אישית"
 
 # @ custom-search
-#: custom-search-plugin.php:32
+#: custom-search-plugin.php:33
 msgid "Custom search"
 msgstr "חיפוש מותאם אישית"
 
 # @ captcha
-#: custom-search-plugin.php:103
+#: custom-search-plugin.php:104
 #, fuzzy
 msgid "Settings saved"
 msgstr "הגדרות"
 
 # @ custom-search
-#: custom-search-plugin.php:115
+#: custom-search-plugin.php:116
 #, fuzzy
 msgid "Enable Custom search for:"
 msgstr "אפשר חיפוש מתקדם ב:"
 
 # @ default
-#: custom-search-plugin.php:126
+#: custom-search-plugin.php:127
 msgid "Save Changes"
 msgstr "שמור שינויים"
 
 # @ custom-search
-#: custom-search-plugin.php:131
+#: custom-search-plugin.php:132
 #, fuzzy
 msgid "No custom post type found."
 msgstr "לא תאם אף סוג פוסט מותאם אישית."
+
+# @ captcha
+#: custom-search-plugin.php:154
+#: custom-search-plugin.php:165
+msgid "Settings"
+msgstr "הגדרות"
+
+#: custom-search-plugin.php:166
+msgid "FAQ"
+msgstr ""
+
+#: custom-search-plugin.php:167
+msgid "Support"
+msgstr ""
 
 # @ captcha
 #, fuzzy
@@ -64,9 +78,6 @@ msgstr "לא תאם אף סוג פוסט מותאם אישית."
 # @ captcha
 #~ msgid "Read more"
 #~ msgstr "קרא עוד"
-# @ captcha
-#~ msgid "Settings"
-#~ msgstr "הגדרות"
 # @ captcha
 #~ msgid "Installed plugins"
 #~ msgstr "תוספים מותקנים"

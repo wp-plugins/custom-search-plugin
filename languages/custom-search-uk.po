@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: custom-search\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-02 14:57+0300\n"
-"PO-Revision-Date: 2013-10-02 14:58+0300\n"
+"PO-Revision-Date: 2013-10-02 14:57+0300\n"
 "Last-Translator: \n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "MIME-Version: 1.0\n"
@@ -14,32 +14,33 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Poedit 1.5.4\n"
+"X-Poedit-Language: Ukrainian\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: custom-search-plugin.php:33
 #: custom-search-plugin.php:110
 msgid "Custom Search Settings"
-msgstr "Настройки Кастомного поиска"
+msgstr "Установки Кастомного Пошуку"
 
 #: custom-search-plugin.php:33
 msgid "Custom search"
-msgstr "Кастомный поиск"
+msgstr "Кастомний пошук"
 
 #: custom-search-plugin.php:104
 msgid "Settings saved"
-msgstr "Настройки сохранены"
+msgstr "Установки збережено"
 
 #: custom-search-plugin.php:116
 msgid "Enable Custom search for:"
-msgstr "Отображать Кастомный поиск для:"
+msgstr "Дозволити Кастомний пошук для:"
 
 #: custom-search-plugin.php:127
 msgid "Save Changes"
-msgstr "Сохранить изменения"
+msgstr "Зберегти зміни"
 
 #: custom-search-plugin.php:132
 msgid "No custom post type found."
-msgstr "Не найдено ни одного пользовательского типа сообщения."
+msgstr "Не знайдено жодного типу кастомного повідомлення."
 
 #: custom-search-plugin.php:154
 #: custom-search-plugin.php:165
@@ -52,7 +53,7 @@ msgstr "FAQ"
 
 #: custom-search-plugin.php:167
 msgid "Support"
-msgstr "Тех.поддержка"
+msgstr "Tех.поддержкa"
 
 #~ msgid "Not set"
 #~ msgstr "Не задан"

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: custom-search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-04 14:57+0300\n"
-"PO-Revision-Date: 2013-09-04 14:58+0300\n"
+"POT-Creation-Date: 2013-10-02 14:57+0300\n"
+"PO-Revision-Date: 2013-10-02 14:57+0300\n"
 "Last-Translator: \n"
 "Language-Team: Fernando De Le&oacute;n <mrjosefernando@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -19,35 +19,49 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 # @ custom-search
-#: custom-search-plugin.php:32
-#: custom-search-plugin.php:109
+#: custom-search-plugin.php:33
+#: custom-search-plugin.php:110
 msgid "Custom Search Settings"
 msgstr "Configuraci&oacute;n de B&uacute;squeda personalizada"
 
 # @ custom-search
-#: custom-search-plugin.php:32
+#: custom-search-plugin.php:33
 msgid "Custom search"
 msgstr " B&uacute;squeda personalizada"
 
 # @ captcha
-#: custom-search-plugin.php:103
+#: custom-search-plugin.php:104
 msgid "Settings saved"
 msgstr "Configuraci&oacute;n"
 
 # @ custom-search
-#: custom-search-plugin.php:115
+#: custom-search-plugin.php:116
 msgid "Enable Custom search for:"
 msgstr "Activar la b&uacute;squeda personalizada en:"
 
 # @ default
-#: custom-search-plugin.php:126
+#: custom-search-plugin.php:127
 msgid "Save Changes"
 msgstr "Guardar Cambios"
 
 # @ custom-search
-#: custom-search-plugin.php:131
+#: custom-search-plugin.php:132
 msgid "No custom post type found."
 msgstr "No ha producido ning&uacute;n tipo de mensaje personalizado."
+
+# @ captcha
+#: custom-search-plugin.php:154
+#: custom-search-plugin.php:165
+msgid "Settings"
+msgstr "Configuraci&oacute;n"
+
+#: custom-search-plugin.php:166
+msgid "FAQ"
+msgstr ""
+
+#: custom-search-plugin.php:167
+msgid "Support"
+msgstr ""
 
 # @ captcha
 #, fuzzy
@@ -60,9 +74,6 @@ msgstr "No ha producido ning&uacute;n tipo de mensaje personalizado."
 # @ captcha
 #~ msgid "Read more"
 #~ msgstr "Leer m&aacute;s"
-# @ captcha
-#~ msgid "Settings"
-#~ msgstr "Configuraci&oacute;n"
 # @ captcha
 #~ msgid "Installed plugins"
 #~ msgstr "Plugins instalados"
