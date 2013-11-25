@@ -30,8 +30,6 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pl
 
 = Translation =
 
-* Dutch (nl_NL)
-* Hebrew (he_IL) (thanks to Sagive SEO)
 * Russian (ru_RU)
 * Spanish (es_ES)(thanks to <a href="mailto:mrjosefernando@gmail.com">Fernando De León</a>)
 * Ukrainian (uk)
