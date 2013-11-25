@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: custom, type, search, better search, custom type, custom post, custom search, custom search plugin, custom post types search, custom content types, custom post types.
 Requires at least: 3.0
 Tested up to: 3.7.1
-Stable tag: 1.16
+Stable tag: 1.17
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,7 +26,7 @@ This plugin allows you to extend search functionality of your website by adding 
 The author of the Custom Search also recommends the following plugins:
 
 * <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
-There is also a premium version of the plugin <a href="http://bestwebsoft.com/plugin/updater-pro/?k=7b42404bbc8ad8cb8745f8704cba3c9a">Updater Pro</a> with more useful features available. It allows to update plugins and WordPress core on several websites. It can make backup of all your files and database before updating.
+There is also a premium version of the plugin <a href="http://bestwebsoft.com/plugin/updater-pro/?k=7b42404bbc8ad8cb8745f8704cba3c9a">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
 
 = Translation =
 
@@ -63,6 +63,10 @@ Go to the Settings page and select custom types that you would like to add to th
 1. Custom Search Settings page.
 
 == Changelog ==
+
+= V1.17 - 25.11.2013 =
+* Update : BWS plugins section is updated.
+* Bugfix : The error with argument 2 in function array_merge() is fixed.
 
 = V1.16 - 31.10.2013 =
 * Update : We updated all functionality for wordpress 3.7.1.
@@ -122,6 +126,9 @@ Go to the Settings page and select custom types that you would like to add to th
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.17 =
+BWS plugins section is updated. The error with argument 2 in function array_merge() is fixed.
 
 = V1.16 =
 We updated all functionality for wordpress 3.7.1. Activation of radio button or checkbox by clicking on its label. Add checking installed wordpress version.

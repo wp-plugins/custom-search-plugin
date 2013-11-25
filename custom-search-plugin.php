@@ -39,19 +39,31 @@ if ( ! function_exists( 'add_cstmsrch_admin_menu' ) ) {
 if( ! function_exists( 'register_cstmsrch_settings' ) ) {
 	function register_cstmsrch_settings() {
 		global $wpmu, $cstmsrch_options;
-		$cstmsrch_option_defaults = array();
+
+		$cstmsrch_options_default = array();
+
+		/* Install the option defaults */
 		if ( 1 == $wpmu ) {
-			if ( ! get_site_option( 'bws_custom_search' ) ) {
-				add_site_option( 'bws_custom_search', $cstmsrch_option_defaults );
+			if ( ! get_site_option( 'cstmsrch_options' ) ) {
+				if ( false !== get_site_option( 'bws_custom_search' ) ) {
+					$cstmsrch_options_default = get_site_option( 'bws_custom_search' );
+					delete_site_option( 'bws_custom_search' );				
+				}
+				add_site_option( 'cstmsrch_options', $cstmsrch_options_default );
 			}
 		} else {
-			if ( ! get_option( 'bws_custom_search' ) )
-				add_option( 'bws_custom_search', $cstmsrch_option_defaults );
+			if ( false !== get_option( 'bws_custom_search' ) ) {
+				$cstmsrch_options_default = get_option( 'bws_custom_search' );
+				delete_option( 'bws_custom_search' );
+			}
+			if ( ! get_option( 'cstmsrch_options' ) )
+				add_option( 'cstmsrch_options', $cstmsrch_options_default );
 		}
+
 		if ( 1 == $wpmu )
-			$cstmsrch_options = get_site_option( 'bws_custom_search' );
+			$cstmsrch_options = get_site_option( 'cstmsrch_options' );
 		else
-			$cstmsrch_options = get_option( 'bws_custom_search' );
+			$cstmsrch_options = get_option( 'cstmsrch_options' );
 	}
 }
 
@@ -63,7 +75,7 @@ if ( ! function_exists ( 'cstmsrch_version_check' ) ) {
 		$require_wp		=	"3.0"; /* Wordpress at least requires version */
 		$plugin			=	plugin_basename( __FILE__ );
 	 	if ( version_compare( $wp_version, $require_wp, "<" ) ) {
-			if( is_plugin_active( $plugin ) ) {
+			if ( is_plugin_active( $plugin ) ) {
 				deactivate_plugins( $plugin );
 				wp_die( "<strong>" . $plugin_data['Name'] . " </strong> " . __( 'requires', 'custom-search' ) . " <strong>WordPress" . $require_wp . " </strong> " . __( 'or higher, that is why it has been deactivated! Please upgrade WordPress and try again.', 'custom-search') . "<br /><br />" . __( 'Back to the WordPress', 'custom-search') . " <a href='" . get_admin_url( null, 'plugins.php' ) . "'>" . __( 'Plugins page', 'custom-search') . "</a>." );
 			}
@@ -76,6 +88,17 @@ if ( ! function_exists ( 'cstmsrch_init' ) ) {
 	function cstmsrch_init() {
 		load_plugin_textdomain( 'custom-search', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 		load_plugin_textdomain( 'bestwebsoft', false, dirname( plugin_basename( __FILE__ ) ) . '/bws_menu/languages/' );
+	}
+}
+
+/* Function ащк пуеештп wp_options for option of this plugin. If this column exists - save value in variable. */
+if ( ! function_exists( 'cstmsrch_options_global' ) ) {
+	function cstmsrch_options_global() {
+		global $wpmu, $cstmsrch_options;
+		if ( 1 == $wpmu )
+			$cstmsrch_options = get_site_option( 'cstmsrch_options' ); 
+		else
+			$cstmsrch_options = get_option( 'cstmsrch_options' );
 	}
 }
 
@@ -108,7 +131,7 @@ if ( ! function_exists( 'cstmsrch_settings_page' ) ) {
 	$cstmsrch_necessary_variables = array();
 	if ( isset( $_REQUEST['cstmsrch_submit'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'cstmsrch_nonce_name' ) ) {
 		$cstmsrch_options = isset( $_REQUEST['cstmsrch_options'] ) ? $_REQUEST['cstmsrch_options'] : array() ;
-		update_option( 'bws_custom_search', $cstmsrch_options );
+		update_option( 'cstmsrch_options', $cstmsrch_options );
 		$message = __( "Settings saved" , 'custom-search' );
 	}
 	$cstmsrch_result = $wpdb->get_results( "SELECT post_type FROM ". $wpdb->posts ." WHERE post_type NOT IN ('revision', 'page', 'post', 'attachment', 'nav_menu_item') GROUP BY post_type" );
@@ -175,8 +198,8 @@ if ( !function_exists( 'cstmsrch_links' ) ) {
 /* Function for delete options from table `wp_options` */
 if ( ! function_exists( 'delete_cstmsrch_settings' ) ) {
 	function delete_cstmsrch_settings() {
-		delete_option( 'bws_custom_search' );
-		delete_site_option( 'bws_custom_search' );
+		delete_option( 'cstmsrch_options' );
+		delete_site_option( 'cstmsrch_options' );
 	}
 }
 
@@ -184,6 +207,9 @@ add_action( 'admin_menu', 'add_cstmsrch_admin_menu' );
 add_action( 'admin_init', 'register_cstmsrch_settings' );
 add_action( 'admin_init', 'cstmsrch_version_check' );
 add_action( 'admin_init', 'cstmsrch_init' );
+
+add_action( 'init', 'cstmsrch_options_global' );
+
 add_action( 'admin_enqueue_scripts', 'cstmsrch_admin_head' );
 
 add_filter( 'pre_get_posts', 'cstmsrch_searchfilter' );
