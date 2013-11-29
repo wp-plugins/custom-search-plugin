@@ -4,7 +4,7 @@ Plugin Name: Custom Search
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: Custom Search Plugin designed to search for site custom types.
 Author: BestWebSoft
-Version: 1.16
+Version: 1.17
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
