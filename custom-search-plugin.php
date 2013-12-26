@@ -4,7 +4,7 @@ Plugin Name: Custom Search
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: Custom Search Plugin designed to search for site custom types.
 Author: BestWebSoft
-Version: 1.17
+Version: 1.18
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -38,7 +38,12 @@ if ( ! function_exists( 'add_cstmsrch_admin_menu' ) ) {
 /* Function create column in table wp_options for option of this plugin. If this column exists - save value in variable. */
 if( ! function_exists( 'register_cstmsrch_settings' ) ) {
 	function register_cstmsrch_settings() {
-		global $wpmu, $cstmsrch_options;
+		global $wpmu, $cstmsrch_options, $bws_plugin_info;
+
+		if ( function_exists( 'get_plugin_data' ) && ( ! isset( $bws_plugin_info ) || empty( $bws_plugin_info ) ) ) {
+			$plugin_info = get_plugin_data( __FILE__ );	
+			$bws_plugin_info = array( 'id' => '81', 'version' => $plugin_info["Version"] );
+		};
 
 		$cstmsrch_options_default = array();
 
@@ -105,8 +110,11 @@ if ( ! function_exists( 'cstmsrch_options_global' ) ) {
 /* Function are using to register styles and scripts */
 if ( ! function_exists ( 'cstmsrch_admin_head' ) ) {
 	function cstmsrch_admin_head() {
-		wp_register_style( 'cstmsrchStylesheet', plugins_url( 'css/style.css', __FILE__ ) );
-		wp_enqueue_style( 'cstmsrchStylesheet' );
+		global $wp_version;
+		if ( $wp_version < 3.8 )
+			wp_enqueue_style( 'cstmsrchStylesheet', plugins_url( 'css/style_wp_before_3.8.css', __FILE__ ) );	
+		else
+			wp_enqueue_style( 'cstmsrchStylesheet', plugins_url( 'css/style.css', __FILE__ ) );
 		if ( isset( $_GET['page'] ) && $_GET['page'] == "bws_plugins" )
 			wp_enqueue_script( 'bws_menu_script', plugins_url( 'js/bws_menu.js', __FILE__ ) );
 	}
@@ -140,8 +148,9 @@ if ( ! function_exists( 'cstmsrch_settings_page' ) ) {
 		<div class="icon32 icon32-bws" id="icon-options-general"></div>
 		<h2><?php _e( 'Custom Search Settings', 'custom-search' ); ?></h2>
 		<div class="updated fade" <?php if ( ! isset( $_REQUEST['cstmsrch_submit'] ) ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
+		<div id="cstmsrch_settings_notice" class="updated fade" style="display:none"><p><strong><?php _e( "Notice:", 'custom-search' ); ?></strong> <?php _e( "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button.", 'custom-search' ); ?></p></div>
 		<?php if ( 0 < count( $cstmsrch_result ) ) { ?>
-			<form method="post" action="" style="margin-top: 10px;">
+			<form method="post" action="" style="margin-top: 10px;" id="cstmsrch_settings_form">
 				<table class="form-table">
 					<tr valign="top">
 						<th scope="row"><?php _e( 'Enable Custom search for:', 'custom-search' ); ?> </th>
@@ -162,6 +171,17 @@ if ( ! function_exists( 'cstmsrch_settings_page' ) ) {
 		<?php } else { ?>
 			<?php _e( 'No custom post type found.', 'custom-search' ); ?>
 		<?php } ?>
+		<br />
+		<div class="bws-plugin-reviews">
+			<div class="bws-plugin-reviews-rate">
+			<?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 'custom-search' ); ?>:<br/>
+			<a href="http://wordpress.org/support/view/plugin-reviews/custom-search-plugin" target="_blank" title="Custom Search reviews"><?php _e( 'Rate the plugin', 'custom-search' ); ?></a><br/>
+			</div>
+			<div class="bws-plugin-reviews-support">
+			<?php _e( 'If there is something wrong about it, please contact us', 'custom-search' ); ?>:<br/>
+			<a href="http://support.bestwebsoft.com">http://support.bestwebsoft.com</a>
+			</div>
+		</div>
 		</div>
 	<?php
 	}
@@ -195,6 +215,27 @@ if ( !function_exists( 'cstmsrch_links' ) ) {
 	}
 }
 
+if ( ! function_exists('cstmsrch_admin_js') ) {
+	function cstmsrch_admin_js() {
+		if ( isset( $_GET['page'] ) && "custom_search.php" == $_GET['page'] ) {
+			/* add notice about changing in the settings page */
+			?>
+			<script type="text/javascript">
+				(function($) {
+					$(document).ready( function() {
+						$( '#cstmsrch_settings_form input' ).bind( "change click select", function() {
+							if ( $( this ).attr( 'type' ) != 'submit' ) {
+								$( '.updated.fade' ).css( 'display', 'none' );
+								$( '#cstmsrch_settings_notice' ).css( 'display', 'block' );
+							};
+						});
+					});
+				})(jQuery);
+			</script>
+		<?php }
+	}
+}
+
 /* Function for delete options from table `wp_options` */
 if ( ! function_exists( 'delete_cstmsrch_settings' ) ) {
 	function delete_cstmsrch_settings() {
@@ -207,10 +248,9 @@ add_action( 'admin_menu', 'add_cstmsrch_admin_menu' );
 add_action( 'admin_init', 'register_cstmsrch_settings' );
 add_action( 'admin_init', 'cstmsrch_version_check' );
 add_action( 'admin_init', 'cstmsrch_init' );
-
 add_action( 'init', 'cstmsrch_options_global' );
-
 add_action( 'admin_enqueue_scripts', 'cstmsrch_admin_head' );
+add_action( 'admin_head', 'cstmsrch_admin_js' );
 
 add_filter( 'pre_get_posts', 'cstmsrch_searchfilter' );
 /* Adds "Settings" link to the plugin action page */

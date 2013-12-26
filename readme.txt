@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: custom, type, search, better search, custom type, custom post, custom search, custom search plugin, custom post types search, custom content types, custom post types.
 Requires at least: 3.0
-Tested up to: 3.7.1
-Stable tag: 1.17
+Tested up to: 3.8
+Stable tag: 1.18
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -61,6 +61,10 @@ Go to the Settings page and select custom types that you would like to add to th
 1. Custom Search Settings page.
 
 == Changelog ==
+
+= V1.18 - 26.12.2013 =
+* Update : BWS plugins section is updated.
+* Update : We updated all functionality for wordpress 3.8.
 
 = V1.17 - 25.11.2013 =
 * Update : BWS plugins section is updated.
@@ -124,6 +128,9 @@ Go to the Settings page and select custom types that you would like to add to th
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.18 =
+BWS plugins section is updated. We updated all functionality for wordpress 3.8.
 
 = V1.17 =
 BWS plugins section is updated. The error with argument 2 in function array_merge() is fixed.
