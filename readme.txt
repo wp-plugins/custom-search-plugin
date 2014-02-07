@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: custom, type, search, better search, custom type, custom post, custom search, custom search plugin, custom post types search, custom content types, custom post types.
 Requires at least: 3.0
-Tested up to: 3.8
-Stable tag: 1.18
+Tested up to: 3.8.1
+Stable tag: 1.19
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,9 +48,17 @@ We can fix some things for free for the users who provide translation of our plu
 
 1. Upload the folder `custom-search-plugin` to the directory `/wp-content/plugins/`.
 2. Activate the plugin via the 'Plugins' menu in WordPress.
-3. The site settings are available in "BWS Plugins"->"Custom Search".
+3. Plugin settings are available in "BWS Plugins"->"Custom Search".
 
 == Frequently Asked Questions ==
+
+= I have some problems with the plugin's work. What Information should I provide to receive proper support? =
+
+Please make sure that the problem hasn't been discussed yet on our forum (<a href="http://support.bestwebsoft.com" target="_blank">http://support.bestwebsoft.com</a>). If no, please provide the following data along with your problem's description:
+1. the link to the page where the problem occurs
+2. the name of the plugin and its version. If you are using a pro version - your order number.
+3. the version of your WordPress installation
+4. copy and paste into the message your system status report. Please read more here: <a href="http://bestwebsoft.com/wp-content/uploads/manual/wp_plugin/general/System_Status.pdf" target="_blank">System_Status.pdf</a>
 
 = Usage =
 
@@ -61,6 +69,12 @@ Go to the Settings page and select custom types that you would like to add to th
 1. Custom Search Settings page.
 
 == Changelog ==
+
+= V1.19 - 07.02.2014 =
+* Update : Screenshots are updated.
+* Update : BWS plugins section is updated.
+* Update : We updated all functionality for wordpress 3.8.1.
+* Budfix : Problem with search results in back-end is fixed. 
 
 = V1.18 - 26.12.2013 =
 * Update : BWS plugins section is updated.
@@ -128,6 +142,9 @@ Go to the Settings page and select custom types that you would like to add to th
 * NEW : Language files are added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.19 =
+Screenshots are updated. BWS plugins section is updated. We updated all functionality for wordpress 3.8.1. Problem with search results in back-end is fixed.
 
 = V1.18 =
 BWS plugins section is updated. We updated all functionality for wordpress 3.8.

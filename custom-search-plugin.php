@@ -4,12 +4,12 @@ Plugin Name: Custom Search
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: Custom Search Plugin designed to search for site custom types.
 Author: BestWebSoft
-Version: 1.18
+Version: 1.19
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
  
-/*  © Copyright 2013  BestWebSoft  ( http://support.bestwebsoft.com )
+/*  © Copyright 2014  BestWebSoft  ( http://support.bestwebsoft.com )
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -92,7 +92,6 @@ if ( ! function_exists ( 'cstmsrch_version_check' ) ) {
 if ( ! function_exists ( 'cstmsrch_init' ) ) {
 	function cstmsrch_init() {
 		load_plugin_textdomain( 'custom-search', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-		load_plugin_textdomain( 'bestwebsoft', false, dirname( plugin_basename( __FILE__ ) ) . '/bws_menu/languages/' );
 	}
 }
 
@@ -115,15 +114,13 @@ if ( ! function_exists ( 'cstmsrch_admin_head' ) ) {
 			wp_enqueue_style( 'cstmsrchStylesheet', plugins_url( 'css/style_wp_before_3.8.css', __FILE__ ) );	
 		else
 			wp_enqueue_style( 'cstmsrchStylesheet', plugins_url( 'css/style.css', __FILE__ ) );
-		if ( isset( $_GET['page'] ) && $_GET['page'] == "bws_plugins" )
-			wp_enqueue_script( 'bws_menu_script', plugins_url( 'js/bws_menu.js', __FILE__ ) );
 	}
 }
 
 if ( ! function_exists( 'cstmsrch_searchfilter' ) ) {
 	function cstmsrch_searchfilter( $query ) {
 		global $cstmsrch_options;
-		if ( $query->is_search ) {
+		if ( $query->is_search && ! is_admin() ) {
 			$cstmsrch_post_standart_types	=	array( 'post', 'page', 'revision', 'attachment', 'nav_menu_item' );
 			$cstmsrch_result_merge			=	array_merge( $cstmsrch_post_standart_types, $cstmsrch_options );
 			$query->set( 'post_type', $cstmsrch_result_merge );
@@ -174,11 +171,11 @@ if ( ! function_exists( 'cstmsrch_settings_page' ) ) {
 		<br />
 		<div class="bws-plugin-reviews">
 			<div class="bws-plugin-reviews-rate">
-			<?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 'custom-search' ); ?>:<br/>
+			<?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 'custom-search' ); ?>: 
 			<a href="http://wordpress.org/support/view/plugin-reviews/custom-search-plugin" target="_blank" title="Custom Search reviews"><?php _e( 'Rate the plugin', 'custom-search' ); ?></a><br/>
 			</div>
 			<div class="bws-plugin-reviews-support">
-			<?php _e( 'If there is something wrong about it, please contact us', 'custom-search' ); ?>:<br/>
+			<?php _e( 'If there is something wrong about it, please contact us', 'custom-search' ); ?>: 
 			<a href="http://support.bestwebsoft.com">http://support.bestwebsoft.com</a>
 			</div>
 		</div>
