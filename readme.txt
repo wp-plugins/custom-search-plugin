@@ -151,7 +151,7 @@ Go to the Settings page and select custom types that you would like to add to th
 == Upgrade Notice ==
 
 = V1.20 =
-BWS plugins section is updated. We updated all functionality for wordpress 3.8.1. Plugin optimization is done. Problem with including nav_menu types to the search results is fixed. Bug with displaying of custom types of deactiveted plugins is fixed.
+BWS plugins section is updated. We updated all functionality for wordpress 3.8.1. Plugin optimization is done. Problem with including nav_menu types to the search results is fixed. Bug with displaying of custom types of deactiveted plugins is fixed. 
 
 = V1.19 =
 Screenshots are updated. BWS plugins section is updated. We updated all functionality for wordpress 3.8.1. Problem with search results in back-end is fixed.
