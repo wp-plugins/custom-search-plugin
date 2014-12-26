@@ -72,7 +72,7 @@ Go to the Settings page and select custom types that you would like to add to th
 
 == Changelog ==
 
-= V1.23 - 26.12.2014 =
+= V1.23 - 26.12.2014 = 
 * Update : BWS plugins section is updated.
 * Update : We updated all functionality for wordpress 4.1.
 
